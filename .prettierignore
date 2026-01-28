@@ -1,0 +1,14 @@
+# Folders
+node_modules/
+.next/
+out/
+build/
+coverage/
+
+# Lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Generated
+*.log
