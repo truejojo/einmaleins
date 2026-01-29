@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Patrick_Hand_SC } from "next/font/google";
-import "./globals.scss";
+import "../sass/main.scss";
 
 const sansSerif = Inter({
   variable: "--font-inter",
