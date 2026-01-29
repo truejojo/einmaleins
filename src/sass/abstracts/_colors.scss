@@ -1,0 +1,338 @@
+// global color tokens
+
+// neutral color spectrum
+$-clr-white: hsl(0 0% 100%);
+$-clr-gray-100: hsl(207 18% 90%);
+$-clr-gray-300: hsl(203 11% 77%);
+$-clr-gray-500: hsl(203 6% 58%);
+$-clr-gray-700: hsl(207 6% 36%);
+$-clr-gray-900: hsl(203 8% 20%);
+$-clr-black: hsl(0 0% 0%);
+
+// primary color spectrum
+$-clr-red-100: hsl(6 35% 94%);
+$-clr-red-300: hsl(6 52% 82%);
+$-clr-red-500: hsl(6 78% 54%);
+$-clr-red-700: hsl(6 84% 44%);
+$-clr-red-900: hsl(6 90% 32%);
+
+$-clr-orange-100: hsl(30 75% 94%);
+$-clr-orange-300: hsl(30 88% 82%);
+$-clr-orange-500: hsl(30 92% 60%);
+$-clr-orange-700: hsl(30 95% 46%);
+$-clr-orange-900: hsl(30 95% 34%);
+
+$-clr-blue-100: hsl(210 60% 94%);
+$-clr-blue-300: hsl(210 70% 82%);
+$-clr-blue-500: hsl(210 75% 62%);
+$-clr-blue-700: hsl(210 80% 46%);
+$-clr-blue-900: hsl(210 85% 34%);
+
+$-clr-green-100: hsl(145 40% 94%);
+$-clr-green-300: hsl(145 50% 82%);
+$-clr-green-500: hsl(145 55% 62%);
+$-clr-green-700: hsl(145 60% 46%);
+$-clr-green-900: hsl(145 65% 34%);
+
+$-clr-pink-100: hsl(340 40% 94%);
+$-clr-pink-300: hsl(340 55% 82%);
+$-clr-pink-500: hsl(340 65% 62%);
+$-clr-pink-700: hsl(340 75% 46%);
+$-clr-pink-900: hsl(340 80% 34%);
+
+$-clr-purple-100: hsl(265 40% 94%);
+$-clr-purple-300: hsl(265 55% 82%);
+$-clr-purple-500: hsl(265 60% 62%);
+$-clr-purple-700: hsl(265 65% 46%);
+$-clr-purple-900: hsl(265 70% 34%);
+
+$-clr-cyan-100: hsl(185 50% 94%);
+$-clr-cyan-300: hsl(185 60% 82%);
+$-clr-cyan-500: hsl(185 65% 62%);
+$-clr-cyan-700: hsl(185 70% 46%);
+$-clr-cyan-900: hsl(185 75% 34%);
+
+$-clr-yellow-100: hsl(45 70% 94%);
+$-clr-yellow-300: hsl(45 80% 82%);
+$-clr-yellow-500: hsl(45 85% 62%);
+$-clr-yellow-700: hsl(45 90% 46%);
+$-clr-yellow-900: hsl(45 95% 34%);
+
+// accent color spectrum
+$-clr-accent-red-100: hsl(186 50% 92%);
+$-clr-accent-red-300: hsl(186 70% 78%);
+$-clr-accent-red-500: hsl(186 85% 52%);
+$-clr-accent-red-700: hsl(186 90% 36%);
+$-clr-accent-red-900: hsl(186 90% 20%);
+
+$-clr-accent-orange-100: hsl(190 50% 92%);
+$-clr-accent-orange-300: hsl(190 70% 78%);
+$-clr-accent-orange-500: hsl(190 75% 50%);
+$-clr-accent-orange-700: hsl(190 80% 34%);
+$-clr-accent-orange-900: hsl(190 85% 20%);
+
+$-clr-accent-blue-100: hsl(38 90% 92%);
+$-clr-accent-blue-300: hsl(38 92% 78%);
+$-clr-accent-blue-500: hsl(38 95% 55%);
+$-clr-accent-blue-700: hsl(38 95% 38%);
+$-clr-accent-blue-900: hsl(38 95% 22%);
+
+$-clr-accent-green-100: hsl(320 55% 92%);
+$-clr-accent-green-300: hsl(320 65% 78%);
+$-clr-accent-green-500: hsl(320 70% 52%);
+$-clr-accent-green-700: hsl(320 75% 36%);
+$-clr-accent-green-900: hsl(320 80% 22%);
+
+$-clr-accent-pink-100: hsl(145 50% 92%);
+$-clr-accent-pink-300: hsl(145 70% 78%);
+$-clr-accent-pink-500: hsl(145 85% 52%);
+$-clr-accent-pink-700: hsl(145 90% 36%);
+$-clr-accent-pink-900: hsl(145 90% 20%);
+
+$-clr-accent-purple-100: hsl(45 80% 92%);
+$-clr-accent-purple-300: hsl(45 80% 78%);
+$-clr-accent-purple-500: hsl(45 80% 52%);
+$-clr-accent-purple-700: hsl(45 80% 36%);
+$-clr-accent-purple-900: hsl(45 80% 22%);
+
+$-clr-accent-cyan-100: hsl(6 75% 92%);
+$-clr-accent-cyan-300: hsl(6 75% 78%);
+$-clr-accent-cyan-500: hsl(6 75% 52%);
+$-clr-accent-cyan-700: hsl(6 75% 36%);
+$-clr-accent-cyan-900: hsl(6 75% 20%);
+
+$-clr-accent-yellow-100: hsl(215 85% 92%);
+$-clr-accent-yellow-300: hsl(215 85% 78%);
+$-clr-accent-yellow-500: hsl(215 85% 52%);
+$-clr-accent-yellow-700: hsl(215 85% 36%);
+$-clr-accent-yellow-900: hsl(215 85% 20%);
+
+// color themes
+$red: (
+  'neutral': (
+    '000': $-clr-white,
+    '100': $-clr-gray-100,
+    '300': $-clr-gray-300,
+    '500': $-clr-gray-500,
+    '700': $-clr-gray-700,
+    '900': $-clr-gray-900,
+    '1000': $-clr-black,
+  ),
+  'primary': (
+    '100': $-clr-red-100,
+    '300': $-clr-red-300,
+    '500': $-clr-red-500,
+    '700': $-clr-red-700,
+    '900': $-clr-red-900,
+  ),
+  'accent': (
+    '100': $-clr-accent-red-100,
+    '300': $-clr-accent-red-300,
+    '500': $-clr-accent-red-500,
+    '700': $-clr-accent-red-700,
+    '900': $-clr-accent-red-900,
+  ),
+);
+
+$orange: (
+  'neutral': (
+    '000': $-clr-white,
+    '100': $-clr-gray-100,
+    '300': $-clr-gray-300,
+    '500': $-clr-gray-500,
+    '700': $-clr-gray-700,
+    '900': $-clr-gray-900,
+    '1000': $-clr-black,
+  ),
+  'primary': (
+    '100': $-clr-orange-100,
+    '300': $-clr-orange-300,
+    '500': $-clr-orange-500,
+    '700': $-clr-orange-700,
+    '900': $-clr-orange-900,
+  ),
+  'accent': (
+    '100': $-clr-accent-orange-100,
+    '300': $-clr-accent-orange-300,
+    '500': $-clr-accent-orange-500,
+    '700': $-clr-accent-orange-700,
+    '900': $-clr-accent-orange-900,
+  ),
+);
+
+$blue: (
+  'neutral': (
+    '000': $-clr-white,
+    '100': $-clr-gray-100,
+    '300': $-clr-gray-300,
+    '500': $-clr-gray-500,
+    '700': $-clr-gray-700,
+    '900': $-clr-gray-900,
+    '1000': $-clr-black,
+  ),
+  'primary': (
+    '100': $-clr-blue-100,
+    '300': $-clr-blue-300,
+    '500': $-clr-blue-500,
+    '700': $-clr-blue-700,
+    '900': $-clr-blue-900,
+  ),
+  'accent': (
+    '100': $-clr-accent-blue-100,
+    '300': $-clr-accent-blue-300,
+    '500': $-clr-accent-blue-500,
+    '700': $-clr-accent-blue-700,
+    '900': $-clr-accent-blue-900,
+  ),
+);
+
+$green: (
+  'neutral': (
+    '000': $-clr-white,
+    '100': $-clr-gray-100,
+    '300': $-clr-gray-300,
+    '500': $-clr-gray-500,
+    '700': $-clr-gray-700,
+    '900': $-clr-gray-900,
+    '1000': $-clr-black,
+  ),
+  'primary': (
+    '100': $-clr-green-100,
+    '300': $-clr-green-300,
+    '500': $-clr-green-500,
+    '700': $-clr-green-700,
+    '900': $-clr-green-900,
+  ),
+  'accent': (
+    '100': $-clr-accent-green-100,
+    '300': $-clr-accent-green-300,
+    '500': $-clr-accent-green-500,
+    '700': $-clr-accent-green-700,
+    '900': $-clr-accent-green-900,
+  ),
+);
+
+$pink: (
+  'neutral': (
+    '000': $-clr-white,
+    '100': $-clr-gray-100,
+    '300': $-clr-gray-300,
+    '500': $-clr-gray-500,
+    '700': $-clr-gray-700,
+    '900': $-clr-gray-900,
+    '1000': $-clr-black,
+  ),
+  'primary': (
+    '100': $-clr-pink-100,
+    '300': $-clr-pink-300,
+    '500': $-clr-pink-500,
+    '700': $-clr-pink-700,
+    '900': $-clr-pink-900,
+  ),
+  'accent': (
+    '100': $-clr-accent-pink-100,
+    '300': $-clr-accent-pink-300,
+    '500': $-clr-accent-pink-500,
+    '700': $-clr-accent-pink-700,
+    '900': $-clr-accent-pink-900,
+  ),
+);
+
+$purple: (
+  'neutral': (
+    '000': $-clr-white,
+    '100': $-clr-gray-100,
+    '300': $-clr-gray-300,
+    '500': $-clr-gray-500,
+    '700': $-clr-gray-700,
+    '900': $-clr-gray-900,
+    '1000': $-clr-black,
+  ),
+  'primary': (
+    '100': $-clr-purple-100,
+    '300': $-clr-purple-300,
+    '500': $-clr-purple-500,
+    '700': $-clr-purple-700,
+    '900': $-clr-purple-900,
+  ),
+  'accent': (
+    '100': $-clr-accent-purple-100,
+    '300': $-clr-accent-purple-300,
+    '500': $-clr-accent-purple-500,
+    '700': $-clr-accent-purple-700,
+    '900': $-clr-accent-purple-900,
+  ),
+);
+
+$cyan: (
+  'neutral': (
+    '000': $-clr-white,
+    '100': $-clr-gray-100,
+    '300': $-clr-gray-300,
+    '500': $-clr-gray-500,
+    '700': $-clr-gray-700,
+    '900': $-clr-gray-900,
+    '1000': $-clr-black,
+  ),
+  'primary': (
+    '100': $-clr-cyan-100,
+    '300': $-clr-cyan-300,
+    '500': $-clr-cyan-500,
+    '700': $-clr-cyan-700,
+    '900': $-clr-cyan-900,
+  ),
+  'accent': (
+    '100': $-clr-accent-cyan-100,
+    '300': $-clr-accent-cyan-300,
+    '500': $-clr-accent-cyan-500,
+    '700': $-clr-accent-cyan-700,
+    '900': $-clr-accent-cyan-900,
+  ),
+);
+
+$yellow: (
+  'neutral': (
+    '000': $-clr-white,
+    '100': $-clr-gray-100,
+    '300': $-clr-gray-300,
+    '500': $-clr-gray-500,
+    '700': $-clr-gray-700,
+    '900': $-clr-gray-900,
+    '1000': $-clr-black,
+  ),
+  'primary': (
+    '100': $-clr-yellow-100,
+    '300': $-clr-yellow-300,
+    '500': $-clr-yellow-500,
+    '700': $-clr-yellow-700,
+    '900': $-clr-yellow-900,
+  ),
+  'accent': (
+    '100': $-clr-accent-yellow-100,
+    '300': $-clr-accent-yellow-300,
+    '500': $-clr-accent-yellow-500,
+    '700': $-clr-accent-yellow-700,
+    '900': $-clr-accent-yellow-900,
+  ),
+);
+
+// contextual color tokens
+$color-neutral-000: var(--neutral-000);
+$color-neutral-100: var(--neutral-100);
+$color-neutral-300: var(--neutral-300);
+$color-neutral-500: var(--neutral-500);
+$color-neutral-700: var(--neutral-700);
+$color-neutral-900: var(--neutral-900);
+$color-neutral-1000: var(--neutral-1000);
+
+$color-primary-100: var(--primary-100);
+$color-primary-300: var(--primary-300);
+$color-primary-500: var(--primary-500);
+$color-primary-700: var(--primary-700);
+$color-primary-900: var(--primary-900);
+
+$color-accent-100: var(--accent-100);
+$color-accent-300: var(--accent-300);
+$color-accent-500: var(--accent-500);
+$color-accent-700: var(--accent-700);
+$color-accent-900: var(--accent-900);
