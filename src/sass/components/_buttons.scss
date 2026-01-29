@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .button {
   display: inline-flex;
@@ -15,23 +15,23 @@
   border-radius: $button-border-radius;
   transition: 275ms ease;
 
-  &[data-type="accent"] {
-    background-color: $button-accent-background;
-    color: $button-accent-color;
+  &[data-type='accent-dark'] {
+    background-color: $button-accent-dark-background;
+    color: $button-accent-dark-color;
 
     &:is(:hover, :focus) {
-      background-color: $button-accent-background-hover;
-      color: $button-accent-color-hover;
+      background-color: $button-accent-dark-background-hover;
+      color: $button-accent-dark-color-hover;
     }
   }
 
-  &[data-type="primary"] {
-    background-color: $button-primary-background;
-    color: $button-primary-color;
+  &[data-type='primary-dark'] {
+    background-color: $button-primary-dark-background;
+    color: $button-primary-dark-color;
 
     &:is(:hover, :focus) {
-      background-color: $button-primary-background-hover;
-      color: $button-primary-color-hover;
+      background-color: $button-primary-dark-background-hover;
+      color: $button-primary-dark-color-hover;
     }
   }
 }

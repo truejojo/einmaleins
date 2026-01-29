@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 :root {
   @each $color, $shade-map in $active-theme {
@@ -7,15 +7,15 @@
     }
   }
 
-  @if ($enable-media-query-dark-mode) {
-    @media (prefers-color-scheme: dark) {
-      @each $color, $shade-map in $dark {
-        @each $shade, $value in $shade-map {
-          --#{$color}-#{$shade}: #{$value};
-        }
-      }
-    }
-  }
+  // @if ($enable-media-query-dark-mode) {
+  //   @media (prefers-color-scheme: dark) {
+  //     @each $color, $shade-map in $dark {
+  //       @each $shade, $value in $shade-map {
+  //         --#{$color}-#{$shade}: #{$value};
+  //       }
+  //     }
+  //   }
+  // }
 
   @each $screen-size, $size-map in $font-sizes {
     @if $screen-size == small {
@@ -26,6 +26,21 @@
       @include mq($screen-size) {
         @each $size-name, $size-value in $size-map {
           --fs-#{$size-name}: #{$size-value};
+        }
+      }
+    }
+  }
+
+  // Spacing-Variablen analog zu Font-Sizes
+  @each $screen-size, $spacing-map in $spacing-sizes {
+    @if $screen-size == small {
+      @each $spacing-name, $spacing-value in $spacing-map {
+        --sp-#{$spacing-name}: #{$spacing-value};
+      }
+    } @else {
+      @include mq($screen-size) {
+        @each $spacing-name, $spacing-value in $spacing-map {
+          --sp-#{$spacing-name}: #{$spacing-value};
         }
       }
     }

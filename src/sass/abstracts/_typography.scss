@@ -1,44 +1,206 @@
-$-ff-sans: system-ui, sans-serif;
-$-ff-serif: serif;
+@use 'sizes' as *;
 
-$font-family-base: $-ff-sans;
-$font-family-accent: $-ff-sans;
+$font-family-base: var(--font-inter), system-ui, sans-serif;
+$font-family-accent: var(--font-patrick-hand-sc), serif;
 
 $font-sizes: (
-  "small": (
-    "900": 3.75rem,
-    "800": 2.25rem,
-    "700": 1.75rem,
-    "600": 1.125rem,
-    "500": 1.125rem,
-    "400": 1rem,
-    "300": 0.925rem,
-    "200": 0.875rem,
+  'small': (
+    'hand': 1.5rem,
+    'headline': 3rem,
+    'h1': 2.125rem,
+    'h2': 1.5rem,
+    'h3': 1.25rem,
+    'paragraph': 1rem,
+    'navlink': 1.25rem,
+    'button': 1.125rem,
+    'label': 0.9375rem,
+    'badge': 0.9375rem,
+    'icon': 1.5rem,
+    'small': 0.875rem,
   ),
-  "large": (
-    "900": 3.75rem,
-    "800": 3rem,
-    "700": 1.75rem,
-    "600": 1.3125rem,
-    "500": 1.125rem,
-    "400": 1rem,
-    "300": 0.925rem,
-    "200": 0.875rem,
+  'medium': (
+    'hand': 1.75rem,
+    'headline': 3.5rem,
+    'h1': 2.5rem,
+    'h2': 1.75rem,
+    'h3': 1.375rem,
+    'paragraph': 1rem,
+    'navlink': 1rem,
+    'button': 1.25rem,
+    'label': 1rem,
+    'badge': 1rem,
+    'icon': 1.75rem,
+    'small': 0.9375rem,
+  ),
+  'large': (
+    'hand': 2rem,
+    'headline': 4rem,
+    'h1': 3rem,
+    'h2': 2rem,
+    'h3': 1.5rem,
+    'paragraph': 1.125rem,
+    'navlink': 1.125rem,
+    'button': 1.3125rem,
+    'label': 1.0625rem,
+    'badge': 1.125rem,
+    'icon': 2rem,
+    'small': 1rem,
   ),
 );
 
-$font-size-300: var(--fs-300);
-$font-size-400: var(--fs-400);
-$font-size-500: var(--fs-500);
-$font-size-600: var(--fs-600);
-$font-size-700: var(--fs-700);
-$font-size-800: var(--fs-800);
-$font-size-900: var(--fs-900);
+$spacing-sizes: (
+  'small': (
+    // Checkbox
+    'checkbox-gap-x': $size-3,
+    // 0.75rem
+    'checkbox-gap-y': $size-2,
+    // 0.5rem
+    'checkbox-padding-x': $size-2,
+    // 0.5rem
+    'checkbox-padding-y': $size-2,
 
+    // 0.5rem
+    // Badge
+    'badge-padding-x': $size-3,
+    // 0.75rem
+    'badge-padding-y': $size-2,
+
+    // 0.5rem
+    // Card
+    'card-padding-x': $size-4,
+    // 1rem
+    'card-padding-y': $size-4,
+
+    // 1rem
+    // Container (generisch)
+    'container-padding-x': $size-4,
+    // 1rem
+    'container-padding-y': $size-4,
+
+    // 1rem
+    // Card-Container (laut Notizen: 1rem / 1.25rem / 1.5rem)
+    'card-container-gap': $size-4,
+    // 1rem
+    'card-container-padding-x': $size-4,
+    // 1rem
+    'card-container-padding-y': $size-4,
+
+    // 1rem
+    // Header-Card (neuer Name für den Header)
+    'header-card-gap-x': $size-3,
+    // 0.75rem
+    'header-card-gap-y': $size-3,
+    // 0.75rem
+    'header-card-padding-x': $size-4,
+    // 1rem
+    'header-card-padding-y': $size-4,
+    // 1rem
+  ),
+  'medium': (
+    'checkbox-gap-x': $size-4,
+    // 1rem
+    'checkbox-gap-y': $size-3,
+    // 0.75rem
+    'checkbox-padding-x': $size-3,
+    // 0.75rem
+    'checkbox-padding-y': $size-3,
+
+    // 0.75rem
+    'badge-padding-x': $size-4,
+    // 1rem
+    'badge-padding-y': $size-3,
+
+    // 0.75rem
+    'card-padding-x': $size-5,
+    // 1.25rem
+    'card-padding-y': $size-5,
+
+    // 1.25rem
+    'container-padding-x': $size-5,
+    // 1.25rem
+    'container-padding-y': $size-5,
+
+    // 1.25rem
+    'card-container-gap': $size-5,
+    // 1.25rem
+    'card-container-padding-x': $size-5,
+    // 1.25rem
+    'card-container-padding-y': $size-5,
+
+    // 1.25rem
+    'header-card-gap-x': $size-4,
+    // 1rem
+    'header-card-gap-y': $size-4,
+    // 1rem
+    'header-card-padding-x': $size-5,
+    // 1.25rem
+    'header-card-padding-y': $size-5,
+    // 1.25rem
+  ),
+  'large': (
+    'checkbox-gap-x': $size-5,
+    // 1.25rem
+    'checkbox-gap-y': $size-4,
+    // 1rem
+    'checkbox-padding-x': $size-4,
+    // 1rem
+    'checkbox-padding-y': $size-4,
+
+    // 1rem
+    'badge-padding-x': $size-5,
+    // 1.25rem
+    'badge-padding-y': $size-4,
+
+    // 1rem
+    'card-padding-x': $size-6,
+    // 1.5rem
+    'card-padding-y': $size-6,
+
+    // 1.5rem
+    'container-padding-x': $size-6,
+    // 1.5rem
+    'container-padding-y': $size-6,
+
+    // 1.5rem
+    'card-container-gap': $size-6,
+    // 1.5rem
+    'card-container-padding-x': $size-6,
+    // 1.5rem
+    'card-container-padding-y': $size-6,
+
+    // 1.5rem
+    'header-card-gap-x': $size-5,
+    // 1.25rem
+    'header-card-gap-y': $size-5,
+    // 1.25rem
+    'header-card-padding-x': $size-6,
+    // 1.5rem
+    'header-card-padding-y': $size-6,
+    // 1.5rem
+  ),
+);
+
+$font-size-hand: var(--fs-hand);
+$font-size-headline: var(--fs-headline);
+$font-size-h1: var(--fs-h1);
+$font-size-h2: var(--fs-h2);
+$font-size-h3: var(--fs-h3);
+$font-size-paragraph: var(--fs-paragraph);
+$font-size-navlink: var(--fs-navlink);
+$font-size-button: var(--fs-button);
+$font-size-label: var(--fs-label);
+$font-size-badge: var(--fs-badge);
+$font-size-icon: var(--fs-icon);
+$font-size-small: var(--fs-small);
+
+$-fw-300: 300;
 $-fw-400: 400;
 $-fw-500: 500;
+$-fw-600: 600;
 $-fw-700: 700;
 
+$font-weight-small: $-fw-300;
 $font-weight-default: $-fw-400;
 $font-weight-semi-bold: $-fw-500;
-$font-weight-bold: $-fw-700;
+$font-weight-bold: $-fw-600;
+$font-weight-extra-bold: $-fw-700;

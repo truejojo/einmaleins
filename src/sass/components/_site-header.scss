@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .site-header {
   color: $site-header-color;
@@ -9,10 +9,10 @@
     display: flex;
     gap: $size-4;
     align-items: $site-header-alignment;
-    justify-content: $site-header-jusitifcation-small-screens;
+    justify-content: $site-header-justification-small-screens;
 
     @include mq(medium) {
-      justify-content: $site-header-jusitifcation-large-screens;
+      justify-content: $site-header-justification-large-screens;
     }
   }
 }

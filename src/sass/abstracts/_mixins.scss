@@ -1,8 +1,8 @@
-@use "sass:meta";
-@use "sass:math";
-@use "sass:map";
-@use "breakpoints" as *;
-@use "tokens" as *;
+@use 'sass:meta';
+@use 'sass:math';
+@use 'sass:map';
+@use 'breakpoints' as *;
+@use 'tokens' as *;
 
 @mixin mq($size) {
   @if map.has-key($breakpoints, $size) {
@@ -27,7 +27,7 @@
   font-size: $fs;
   color: $color;
 
-  font-family: $heading-font-family;
+  font-family: $heading-font-family-default;
   text-transform: $heading-text-transform;
   letter-spacing: $heading-letter-spacing;
   font-weight: $heading-font-weight;
