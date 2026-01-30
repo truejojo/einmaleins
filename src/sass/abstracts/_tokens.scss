@@ -24,6 +24,10 @@ $line-height-default: 1.6;
 $border-radius-1: $size-2;
 $border-radius-2: $size-4;
 
+$box-shadow-default:
+  0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 $box-shadow-1:
   0px 6px 5px rgb(0, 0, 0, 0.012),
   0px 22px 18px rgb(0, 0, 0, 0.018),
@@ -124,41 +128,42 @@ $button-font-family: $body-font-family;
 $button-font-size: $font-size-button;
 $button-font-weight: $font-weight-semi-bold;
 $button-line-height: $line-height-loose;
+$button-letter-spacing: $body-letter-spacing;
 $button-text-transform: uppercase;
-$button-padding: 0.75em 2em;
+$button-padding: 0.5em 2em;
 $button-border: none;
 $button-border-radius: $border-radius-1;
-$button-box-shadow: $box-shadow-2;
+$button-box-shadow: $box-shadow-default;
 
 // primary button
 $button-primary-dark-color: $color-white;
 $button-primary-dark-background: $color-accent-700;
-$button-primary-dark-image: linear-gradient(180deg, $color-accent-900, $color-accent-500);
+$button-primary-dark-image: linear-gradient(90deg, $color-accent-900, $color-accent-500);
 $button-primary-dark-color-hover: $color-white;
 $button-primary-dark-background-hover: $color-accent-900;
-$button-primary-dark-image-hover: linear-gradient(180deg, $color-accent-500, $color-accent-900);
+$button-primary-dark-image-hover: linear-gradient(90deg, $color-accent-500, $color-accent-900);
 
 $button-primary-light-color: $color-black;
 $button-primary-light-background: $color-accent-100;
-$button-primary-light-image: linear-gradient(180deg, $color-accent-500, $color-accent-100);
+$button-primary-light-image: linear-gradient(90deg, $color-accent-500, $color-accent-100);
 $button-primary-light-color-hover: $color-black;
 $button-primary-light-background-hover: $color-accent-300;
-$button-primary-light-image-hover: linear-gradient(180deg, $color-accent-100, $color-accent-500);
+$button-primary-light-image-hover: linear-gradient(90deg, $color-accent-100, $color-accent-500);
 
 // accent button
 $button-accent-dark-color: $color-white;
 $button-accent-dark-background: $color-primary-700;
-$button-accent-dark-image: linear-gradient(180deg, $color-primary-900, $color-primary-500);
+$button-accent-dark-image: linear-gradient(90deg, $color-primary-900, $color-primary-500);
 $button-accent-dark-color-hover: $color-white;
 $button-accent-dark-background-hover: $color-primary-900;
-$button-accent-dark-image-hover: linear-gradient(180deg, $color-primary-500, $color-primary-900);
+$button-accent-dark-image-hover: linear-gradient(90deg, $color-primary-500, $color-primary-900);
 
 $button-accent-light-color: $color-black;
 $button-accent-light-background: $color-primary-100;
-$button-accent-light-image: linear-gradient(180deg, $color-primary-500, $color-primary-100);
+$button-accent-light-image: linear-gradient(90deg, $color-primary-500, $color-primary-100);
 $button-accent-light-color-hover: $color-black;
 $button-accent-light-background-hover: $color-primary-300;
-$button-accent-light-image-hover: linear-gradient(180deg, $color-primary-100, $color-primary-500);
+$button-accent-light-image-hover: linear-gradient(90deg, $color-primary-100, $color-primary-500);
 
 // cards
 $card-flow-spacing: $size-2;

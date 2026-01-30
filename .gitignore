@@ -30,8 +30,19 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files
+# Keep local secrets out of git, but allow examples
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# firebase service account files (if used on disk)
+service-account.json
+firebase-adminsdk-*.json
+*.key
+*.p12
 
 # vercel
 .vercel

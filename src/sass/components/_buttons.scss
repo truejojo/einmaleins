@@ -8,30 +8,36 @@
   line-height: 1;
   font-family: $button-font-family;
   font-size: $button-font-size;
+  letter-spacing: $button-letter-spacing;
   text-transform: $button-text-transform;
   font-weight: $button-font-weight;
   padding: $button-padding;
   border: $button-border;
   border-radius: $button-border-radius;
+  box-shadow: $button-box-shadow;
   transition: 275ms ease;
-
-  &[data-type='accent-dark'] {
-    background-color: $button-accent-dark-background;
-    color: $button-accent-dark-color;
-
-    &:is(:hover, :focus) {
-      background-color: $button-accent-dark-background-hover;
-      color: $button-accent-dark-color-hover;
-    }
-  }
 
   &[data-type='primary-dark'] {
     background-color: $button-primary-dark-background;
+    background-image: $button-primary-dark-image;
     color: $button-primary-dark-color;
 
     &:is(:hover, :focus) {
       background-color: $button-primary-dark-background-hover;
+      background-image: $button-primary-dark-image-hover;
       color: $button-primary-dark-color-hover;
+    }
+  }
+
+  &[data-type='accent-dark'] {
+    background-color: $button-accent-dark-background;
+    background-image: $button-accent-dark-image;
+    color: $button-accent-dark-color;
+
+    &:is(:hover, :focus) {
+      background-color: $button-accent-dark-background-hover;
+      background-image: $button-accent-dark-image-hover;
+      color: $button-accent-dark-color-hover;
     }
   }
 }
