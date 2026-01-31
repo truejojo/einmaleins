@@ -5,16 +5,39 @@ import { useState } from 'react';
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSignIn = (e: React.FormEvent) => {
+  const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle sign-in logic here
-    console.log('Signing in with', { email, password });
+    setError(null);
+    setLoading(true);
+
+    try {
+      const res = await fetch('/api/sign-in', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data?.error ?? 'Anmeldung fehlgeschlagen');
+        return;
+      }
+
+      console.log('User signed in:', data);
+      setEmail('');
+      setPassword('');
+    } catch {
+      setError('Netzwerkfehler');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <>
-      <h1 className='h1'>Sign In</h1>
+      <h1 className="h1">Sign In</h1>
       <form onSubmit={handleSignIn}>
         <div>
           <label htmlFor="email">Email:</label>
@@ -38,7 +61,10 @@ const SignIn = () => {
             required
           />
         </div>
-        <button type="submit" className='button' data-type='primary-dark'>Sign In</button>
+        {error && <p className="text-danger">{error}</p>}
+        <button type="submit" className="button" data-type="primary-dark" disabled={loading}>
+          {loading ? 'Wird erstellt…' : 'Sign In'}
+        </button>
       </form>
     </>
   );

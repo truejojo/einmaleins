@@ -1,19 +1,19 @@
 import { NextResponse } from 'next/server';
 import { adminAuth } from '@/lib/firebase/admin';
+import { signUpSchema, formatZodIssues } from '@/lib/validation/auth';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const email = body?.email as string | undefined;
-    const password = body?.password as string | undefined;
-    const name = (body?.name as string | undefined) ?? undefined;
-
-    if (!email || !password) {
+    const parsed = signUpSchema.safeParse(body);
+    if (!parsed.success) {
       return NextResponse.json(
-        { error: 'E-Mail und Passwort sind erforderlich' },
+        { error: 'Validierung fehlgeschlagen', issues: formatZodIssues(parsed.error) },
         { status: 400 },
       );
     }
+
+    const { email, password, name } = parsed.data;
 
     const userRecord = await adminAuth.createUser({
       email,
@@ -21,10 +21,7 @@ export async function POST(request: Request) {
       displayName: name,
     });
 
-    return NextResponse.json(
-      { uid: userRecord.uid },
-      { status: 201 },
-    );
+    return NextResponse.json({ uid: userRecord.uid }, { status: 201 });
   } catch (error: unknown) {
     const e = error as { message?: string; code?: string } | undefined;
     const message = e?.message ?? 'Unbekannter Fehler';

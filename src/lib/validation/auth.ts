@@ -25,3 +25,14 @@ export const signUpSchema = z.object({
 });
 
 export type SignUpInput = z.infer<typeof signUpSchema>;
+
+export const signInSchema = z.object({
+  email: emailSchema,
+  password: passwordSchema,
+});
+
+export type SignInInput = z.infer<typeof signInSchema>;
+
+export function formatZodIssues(error: z.ZodError) {
+  return error.issues.map((i) => ({ path: i.path, message: i.message }));
+}

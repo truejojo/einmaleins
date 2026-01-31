@@ -14,6 +14,7 @@ const SignUp = () => {
     setError(null);
     setLoading(true);
     
+
     try {
       const res = await fetch('/api/sign-up', {
         method: 'POST',
@@ -25,7 +26,7 @@ const SignUp = () => {
         setError(data?.error ?? 'Registrierung fehlgeschlagen');
         return;
       }
-      // Erfolgreich: hier kannst du weiterleiten oder Feedback anzeigen
+
       console.log('User created:', data);
       setEmail('');
       setPassword('');
